@@ -81,6 +81,21 @@ inside the .modal-close parent container*/
   width: 80%;
   max-width: 1000px;
   margin: 1em auto;
+  display: flex;
+  min-height: 100vh;
+}
+
+.col-main {
+  flex: 80%;
+}
+
+.col-sidebar {
+  flex: 1 20%;
+}
+
+.col-sidebar .affix {
+  position: sticky;
+  top: 1em;
 }
 
 .dropdown {
