@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ch 9 Modular CSS</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <div class="message message--success">Save successful</div>
+    <br />
+    <hr />
+    <button class="button button--large">Read more</button>
+    <button class="button button--success">Save</button>
+    <button class="button button--danger button--small">Cancel</button>
+
+    <br /><br /><br />
+
+    <div class="media media--right">
+      <img class="media__image" src="runner.png" />
+      <div class="media__body">
+        <h4>Strength</h4>
+        <p>
+          Strength straining is an important part of injury prevention. Focus on
+          your core&mdash;especially your abs and glutes.
+        </p>
+      </div>
+    </div>
+  </body>
+
+  <br /><br /><br />
+  <div class="dropdown">
+    <button class="dropdown__toggle">Main Menu</button>
+    <div class="dropdown__drawer">
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/coffees">Coffees</a></li>
+        <li><a href="/brewers">Brewers</a></li>
+        <li><a href="/specials">Specials</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    (function () {
+      const toggle = document.querySelector(".dropdown__toggle");
+      toggle.addEventListener("click", function (event) {
+        event.preventDefault();
+        const dropdown = event.target.parentNode;
+        dropdown.classList.toggle("is-open");
+      });
+    })();
+  </script>
+</html>
